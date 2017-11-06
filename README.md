@@ -1,10 +1,10 @@
-# Middleware that removes the raw body from the request
+# Middleware that compresses HTML response bodies
 
-[![Build Status](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-clear-body.svg?branch=master)](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-clear-body)
-[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/react-http-middleware-clear-body/v/stable.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-clear-body)
-[![Total Downloads](https://poser.pugx.org/WyriHaximus/react-http-middleware-clear-body/downloads.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-clear-body)
-[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-http-middleware-clear-body/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-http-middleware-clear-body/?branch=master)
-[![License](https://poser.pugx.org/WyriHaximus/react-http-middleware-clear-body/license.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-clear-body)
+[![Build Status](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-html-compress.svg?branch=master)](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-html-compress)
+[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/react-http-middleware-html-compress/v/stable.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-html-compress)
+[![Total Downloads](https://poser.pugx.org/WyriHaximus/react-http-middleware-html-compress/downloads.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-html-compress)
+[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-http-middleware-html-compress/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-http-middleware-html-compress/?branch=master)
+[![License](https://poser.pugx.org/WyriHaximus/react-http-middleware-html-compress/license.png)](https://packagist.org/packages/WyriHaximus/react-http-middleware-html-compress)
 [![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/reactphp-http-middleware-clear-body/badge.svg)](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-clear-body)
 
 # Install
@@ -12,7 +12,7 @@
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `^`.
 
 ```
-composer require wyrihaximus/react-http-middleware-clear-body
+composer require wyrihaximus/react-http-middleware-html-compress
 ```
 
 This middleware removes the raw body from the request. Best used after the request body has been parsed.
@@ -21,11 +21,17 @@ This middleware removes the raw body from the request. Best used after the reque
 
 ```php
 $server = new Server(new MiddlewareRunner([
-    /** Other middleware */
-    new RequestBodyBufferMiddleware(16 * 1024 * 1024), // 16 MiB
-    new RequestBodyParserMiddleware(),
-    new ClearBodyMiddleware(),
-    /** Other middleware */
+    new HtmlCompressMiddleware(),
+]));
+```
+
+Optionally an instance of `WyriHaximus\HtmlCompress\Parser` is accepted as first constructor argument. The default uses a very simple but fast compressor that only compresses HTML. The following example goes for the smallest possible size:
+
+```php
+use WyriHaximus\HtmlCompress\Factory;
+
+$server = new Server(new MiddlewareRunner([
+    new HtmlCompressMiddleware(Factory::constructSmallest()),
 ]));
 ```
 
