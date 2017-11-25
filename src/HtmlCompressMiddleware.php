@@ -4,7 +4,8 @@ namespace WyriHaximus\React\Http\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use React\Http\HttpBodyStream;
+use React\Http\Io\HttpBodyStream;
+use React\Promise\PromiseInterface;
 use WyriHaximus\HtmlCompress\Factory;
 use WyriHaximus\HtmlCompress\Parser;
 use function React\Promise\resolve;
@@ -36,7 +37,13 @@ final class HtmlCompressMiddleware
 
     public function __invoke(ServerRequestInterface $request, callable $next)
     {
-        return resolve($next($request))->then(function (ResponseInterface $response) {
+        $promise = $next($request);
+
+        if (!($promise instanceof PromiseInterface)) {
+            $promise = resolve($promise);
+        }
+
+        return $promise->then(function (ResponseInterface $response) {
             if ($response->getBody() instanceof HttpBodyStream) {
                 return $response;
             }
