@@ -7,9 +7,9 @@ use Psr\Http\Message\ServerRequestInterface;
 use React\EventLoop\Factory;
 use React\Http\Response;
 use React\Http\ServerRequest;
+use WyriHaximus\React\Http\Middleware\HtmlCompressMiddleware;
 use function Clue\React\Block\await;
 use function RingCentral\Psr7\stream_for;
-use WyriHaximus\React\Http\Middleware\HtmlCompressMiddleware;
 
 final class HtmlCompressMiddlewareTest extends TestCase
 {
