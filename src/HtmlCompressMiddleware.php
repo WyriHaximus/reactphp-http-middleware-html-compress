@@ -37,30 +37,35 @@ final class HtmlCompressMiddleware
 
     public function __invoke(ServerRequestInterface $request, callable $next)
     {
-        $promise = $next($request);
+        $response = $next($request);
 
-        if (!($promise instanceof PromiseInterface)) {
-            $promise = resolve($promise);
+        if (!($response instanceof PromiseInterface)) {
+            return resolve($this->handleResponse($response));
         }
 
-        return $promise->then(function (ResponseInterface $response) {
-            if ($response->getBody() instanceof HttpBodyStream) {
-                return $response;
-            }
-
-            if (!$response->hasHeader('content-type')) {
-                return $response;
-            }
-
-            list($contentType) = explode(';', $response->getHeaderLine('content-type'));
-            if (!in_array($contentType, self::MIME_TYPES, true)) {
-                return $response;
-            }
-
-            $body = (string)$response->getBody();
-            $compressedBody = $this->compressor->compress($body);
-
-            return $response->withBody(stream_for($compressedBody))->withHeader('Content-Length', strlen($compressedBody));
+        return $response->then(function (ResponseInterface $response) {
+            return $this->handleResponse($response);
         });
+    }
+
+    private function handleResponse(ResponseInterface $response)
+    {
+        if ($response->getBody() instanceof HttpBodyStream) {
+            return $response;
+        }
+
+        if (!$response->hasHeader('content-type')) {
+            return $response;
+        }
+
+        list($contentType) = explode(';', $response->getHeaderLine('content-type'));
+        if (!in_array($contentType, self::MIME_TYPES, true)) {
+            return $response;
+        }
+
+        $body = (string)$response->getBody();
+        $compressedBody = $this->compressor->compress($body);
+
+        return $response->withBody(stream_for($compressedBody))->withHeader('Content-Length', strlen($compressedBody));
     }
 }
