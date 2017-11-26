@@ -5,10 +5,13 @@ namespace WyriHaximus\React\Tests\Http\Middleware;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use React\EventLoop\Factory;
+use React\Http\Io\HttpBodyStream;
 use React\Http\Io\ServerRequest;
 use React\Http\Response;
+use React\Stream\ThroughStream;
 use WyriHaximus\React\Http\Middleware\HtmlCompressMiddleware;
 use function Clue\React\Block\await;
+use function React\Promise\resolve;
 use function RingCentral\Psr7\stream_for;
 
 final class HtmlCompressMiddlewareTest extends TestCase
@@ -43,7 +46,23 @@ final class HtmlCompressMiddlewareTest extends TestCase
         self::assertSame('<head><title>woei</title></head>', (string)$compressedResponse->getBody());
     }
 
-    public function testIgnoreNotSupportedAndMissingContentTypes()
+    public function provideheadersForIgnoreResponse()
+    {
+        yield [
+            [],
+        ];
+
+        yield [
+            [
+                'Content-Type' => 'text/pain',
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider provideheadersForIgnoreResponse
+     */
+    public function testIgnoreNotSupportedAndMissingContentTypes(array $headers)
     {
         $body = '<head>
                     <title>woei</title>
@@ -51,13 +70,29 @@ final class HtmlCompressMiddlewareTest extends TestCase
         $request = (new ServerRequest('GET', 'https://example.com/'))->withBody(stream_for('foo.bar'));
         $middleware = new HtmlCompressMiddleware();
         /** @var ServerRequestInterface $compressedResponse */
-        $compressedResponse = await($middleware($request, function (ServerRequestInterface $request) use ($body) {
-            return new Response(
+        $compressedResponse = await($middleware($request, function (ServerRequestInterface $request) use ($body, $headers) {
+            return resolve(new Response(
                 200,
-                [],
+                $headers,
                 $body
-            );
+            ));
         }), Factory::create());
         self::assertSame($body, (string)$compressedResponse->getBody());
+    }
+
+    public function testHttpBodyStream()
+    {
+        $response = new Response(
+            200,
+            [],
+            new HttpBodyStream(new ThroughStream(), null)
+        );
+        $request = (new ServerRequest('GET', 'https://example.com/'))->withBody(stream_for('foo.bar'));
+        $middleware = new HtmlCompressMiddleware();
+        /** @var ServerRequestInterface $compressedResponse */
+        $compressedResponse = await($middleware($request, function (ServerRequestInterface $request) use ($response) {
+            return resolve($response);
+        }), Factory::create());
+        self::assertSame($response, $compressedResponse);
     }
 }
