@@ -20,9 +20,11 @@ This middleware removes the raw body from the request. Best used after the reque
 # Usage
 
 ```php
-$server = new Server(new MiddlewareRunner([
+$server = new Server([
+    /** Other Middleware */
     new HtmlCompressMiddleware(),
-]));
+    /** Other Middleware */
+]);
 ```
 
 Optionally an instance of `WyriHaximus\HtmlCompress\Parser` is accepted as first constructor argument. The default uses a very simple but fast compressor that only compresses HTML. The following example goes for the smallest possible size:
@@ -30,9 +32,11 @@ Optionally an instance of `WyriHaximus\HtmlCompress\Parser` is accepted as first
 ```php
 use WyriHaximus\HtmlCompress\Factory;
 
-$server = new Server(new MiddlewareRunner([
+$server = new Server([
+    /** Other Middleware */
     new HtmlCompressMiddleware(Factory::constructSmallest()),
-]));
+    /** Other Middleware */
+]);
 ```
 
 # License
