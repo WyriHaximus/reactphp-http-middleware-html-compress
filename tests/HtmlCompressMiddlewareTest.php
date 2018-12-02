@@ -14,6 +14,9 @@ use function Clue\React\Block\await;
 use function React\Promise\resolve;
 use function RingCentral\Psr7\stream_for;
 
+/**
+ * @internal
+ */
 final class HtmlCompressMiddlewareTest extends TestCase
 {
     public function provideContentTypes()
@@ -26,7 +29,7 @@ final class HtmlCompressMiddlewareTest extends TestCase
     /**
      * @dataProvider provideContentTypes
      */
-    public function testCompressedResponse(string $contentType)
+    public function testCompressedResponse(string $contentType): void
     {
         $request = (new ServerRequest('GET', 'https://example.com/'))->withBody(stream_for('foo.bar'));
         $middleware = new HtmlCompressMiddleware();
@@ -62,7 +65,7 @@ final class HtmlCompressMiddlewareTest extends TestCase
     /**
      * @dataProvider provideheadersForIgnoreResponse
      */
-    public function testIgnoreNotSupportedAndMissingContentTypes(array $headers)
+    public function testIgnoreNotSupportedAndMissingContentTypes(array $headers): void
     {
         $body = '<head>
                     <title>woei</title>
@@ -80,7 +83,7 @@ final class HtmlCompressMiddlewareTest extends TestCase
         self::assertSame($body, (string)$compressedResponse->getBody());
     }
 
-    public function testHttpBodyStream()
+    public function testHttpBodyStream(): void
     {
         $response = new Response(
             200,

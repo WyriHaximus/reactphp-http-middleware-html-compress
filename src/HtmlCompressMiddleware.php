@@ -58,14 +58,14 @@ final class HtmlCompressMiddleware
             return $response;
         }
 
-        list($contentType) = explode(';', $response->getHeaderLine('content-type'));
-        if (!in_array($contentType, self::MIME_TYPES, true)) {
+        list($contentType) = \explode(';', $response->getHeaderLine('content-type'));
+        if (!\in_array($contentType, self::MIME_TYPES, true)) {
             return $response;
         }
 
         $body = (string)$response->getBody();
         $compressedBody = $this->compressor->compress($body);
 
-        return $response->withBody(stream_for($compressedBody))->withHeader('Content-Length', strlen($compressedBody));
+        return $response->withBody(stream_for($compressedBody))->withHeader('Content-Length', \strlen($compressedBody));
     }
 }
