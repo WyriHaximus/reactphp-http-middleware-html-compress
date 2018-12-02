@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "3cb07d6bac6591113cbb72d6288c5a44",
@@ -48,6 +48,44 @@
                 "event-emitter"
             ],
             "time": "2017-07-23T21:35:13+00:00"
+        },
+        {
+            "name": "jalle19/php-yui-compressor",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jalle19/php-yui-compressor.git",
+                "reference": "eb88c4f7fd8d7c8bd15a1970611d67cca11f71a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jalle19/php-yui-compressor/zipball/eb88c4f7fd8d7c8bd15a1970611d67cca11f71a0",
+                "reference": "eb88c4f7fd8d7c8bd15a1970611d67cca11f71a0",
+                "shasum": ""
+            },
+            "require": {
+                "nervo/yuicompressor": "2.4.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "YUI": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "A modern PHP wrapper for the YUI compressor",
+            "homepage": "https://github.com/Jalle19/php-yui-compressor",
+            "keywords": [
+                "JS",
+                "css",
+                "minify",
+                "yui"
+            ],
+            "time": "2014-06-03T12:02:11+00:00"
         },
         {
             "name": "linkorb/jsmin-php",
@@ -107,6 +145,115 @@
             "time": "2013-03-15T13:16:35+00:00"
         },
         {
+            "name": "matthiasmullie/minify",
+            "version": "1.3.60",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/minify.git",
+                "reference": "ab7fea80ce5ce6549baaf272bc8bd926a7e08f90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/ab7fea80ce5ce6549baaf272bc8bd926a7e08f90",
+                "reference": "ab7fea80ce5ce6549baaf272bc8bd926a7e08f90",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "matthiasmullie/path-converter": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.0",
+                "matthiasmullie/scrapbook": "~1.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "psr/cache-implementation": "Cache implementation to use with Minify::cache"
+            },
+            "bin": [
+                "bin/minifycss",
+                "bin/minifyjs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\Minify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "minify@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSS & JavaScript minifier, in PHP. Removes whitespace, strips comments, combines files (incl. @import statements and small assets in CSS files), and optimizes/shortens a few common programming patterns.",
+            "homepage": "http://www.minifier.org",
+            "keywords": [
+                "JS",
+                "css",
+                "javascript",
+                "minifier",
+                "minify"
+            ],
+            "time": "2018-04-18T08:50:35+00:00"
+        },
+        {
+            "name": "matthiasmullie/path-converter",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/path-converter.git",
+                "reference": "5e4b121c8b9f97c80835c1d878b0812ba1d607c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/5e4b121c8b9f97c80835c1d878b0812ba1d607c9",
+                "reference": "5e4b121c8b9f97c80835c1d878b0812ba1d607c9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\PathConverter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "pathconverter@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Relative path converter",
+            "homepage": "http://github.com/matthiasmullie/path-converter",
+            "keywords": [
+                "converter",
+                "path",
+                "paths",
+                "relative"
+            ],
+            "time": "2018-10-25T15:19:41+00:00"
+        },
+        {
             "name": "meenie/javascript-packer",
             "version": "1.1",
             "source": {
@@ -145,16 +292,16 @@
         },
         {
             "name": "natxet/CssMin",
-            "version": "v3.0.5",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/natxet/CssMin.git",
-                "reference": "9580f5448f05a82c96cfe6c7063a77807d8ec56d"
+                "reference": "d5d9f4c3e5cedb1ae96a95a21731f8790e38f1dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/natxet/CssMin/zipball/9580f5448f05a82c96cfe6c7063a77807d8ec56d",
-                "reference": "9580f5448f05a82c96cfe6c7063a77807d8ec56d",
+                "url": "https://api.github.com/repos/natxet/CssMin/zipball/d5d9f4c3e5cedb1ae96a95a21731f8790e38f1dd",
+                "reference": "d5d9f4c3e5cedb1ae96a95a21731f8790e38f1dd",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +335,34 @@
                 "css",
                 "minify"
             ],
-            "time": "2017-10-04T16:54:00+00:00"
+            "time": "2018-01-09T11:15:01+00:00"
+        },
+        {
+            "name": "nervo/yuicompressor",
+            "version": "2.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nervo/yuicompressor.git",
+                "reference": "e6e3b215c3998cf6092613c002ae533ae75d7ada"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nervo/yuicompressor/zipball/e6e3b215c3998cf6092613c002ae533ae75d7ada",
+                "reference": "e6e3b215c3998cf6092613c002ae533ae75d7ada",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "YUI Compressor is an open source tool that supports the compression of both JavaScript and CSS files. The JavaScript compression removes comments and white-spaces as well as obfuscates local variables using the smallest possible variable name. CSS compression is done using a regular-expression-based CSS minifier.",
+            "homepage": "https://github.com/yui/yuicompressor",
+            "keywords": [
+                "java",
+                "yui"
+            ],
+            "time": "2013-09-13T10:26:14+00:00"
         },
         {
             "name": "patchwork/jsqueeze",
@@ -767,6 +941,52 @@
             "time": "2016-03-25T17:36:49+00:00"
         },
         {
+            "name": "tedivm/jshrink",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "21254058dc3ce6aba6bef458cff4bfa25cf8b198"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/21254058dc3ce6aba6bef458cff4bfa25cf8b198",
+                "reference": "21254058dc3ce6aba6bef458cff4bfa25cf8b198",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.8",
+                "php-coveralls/php-coveralls": "^1.1.0",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedious/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "time": "2018-09-16T00:02:51+00:00"
+        },
+        {
             "name": "websharks/css-minifier",
             "version": "150820",
             "source": {
@@ -822,24 +1042,27 @@
         },
         {
             "name": "wyrihaximus/html-compress",
-            "version": "1.2.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/HtmlCompress.git",
-                "reference": "b51fb7593cde54f364782d13c731b711be7f77b9"
+                "reference": "0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/b51fb7593cde54f364782d13c731b711be7f77b9",
-                "reference": "b51fb7593cde54f364782d13c731b711be7f77b9",
+                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975",
+                "reference": "0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975",
                 "shasum": ""
             },
             "require": {
+                "jalle19/php-yui-compressor": "^1.0",
                 "linkorb/jsmin-php": "1.0.0",
+                "matthiasmullie/minify": "^1.3",
                 "meenie/javascript-packer": "1.1",
                 "natxet/cssmin": "^3.0",
                 "patchwork/jsqueeze": "~1.0|~2.0",
-                "php": ">=5.4.0",
+                "php": "^7.0 || ^5.6",
+                "tedivm/jshrink": "^1.3",
                 "websharks/css-minifier": "150820"
             },
             "require-dev": {
@@ -870,7 +1093,7 @@
                 "compress",
                 "html"
             ],
-            "time": "2016-07-26T21:15:52+00:00"
+            "time": "2018-01-03T21:15:44+00:00"
         }
     ],
     "packages-dev": [
@@ -1750,6 +1973,9 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause|MIT"
+            ],
             "authors": [
                 {
                     "name": "Kore Nordmann",
