@@ -6,7 +6,6 @@ use PhpCsFixer\Config;
 return (function (): Config
 {
     $paths = [
-        __DIR__ . DIRECTORY_SEPARATOR . 'examples',
         __DIR__ . DIRECTORY_SEPARATOR . 'src',
         __DIR__ . DIRECTORY_SEPARATOR . 'tests',
     ];
