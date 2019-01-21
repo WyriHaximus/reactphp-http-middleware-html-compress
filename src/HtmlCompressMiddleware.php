@@ -6,10 +6,10 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use React\Http\Io\HttpBodyStream;
 use React\Promise\PromiseInterface;
-use WyriHaximus\HtmlCompress\Factory;
-use WyriHaximus\HtmlCompress\Parser;
 use function React\Promise\resolve;
 use function RingCentral\Psr7\stream_for;
+use WyriHaximus\HtmlCompress\Factory;
+use WyriHaximus\HtmlCompress\Parser;
 
 final class HtmlCompressMiddleware
 {
