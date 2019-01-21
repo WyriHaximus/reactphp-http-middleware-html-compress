@@ -2,17 +2,17 @@
 
 namespace WyriHaximus\React\Tests\Http\Middleware;
 
+use function Clue\React\Block\await;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use React\EventLoop\Factory;
 use React\Http\Io\HttpBodyStream;
 use React\Http\Io\ServerRequest;
 use React\Http\Response;
-use React\Stream\ThroughStream;
-use WyriHaximus\React\Http\Middleware\HtmlCompressMiddleware;
-use function Clue\React\Block\await;
 use function React\Promise\resolve;
+use React\Stream\ThroughStream;
 use function RingCentral\Psr7\stream_for;
+use WyriHaximus\React\Http\Middleware\HtmlCompressMiddleware;
 
 /**
  * @internal
