@@ -45,8 +45,22 @@ final class HtmlCompressMiddlewareTest extends TestCase
                 </head>'
             );
         }), Factory::create());
-        self::assertSame(32, (int)$compressedResponse->getHeaderLine('Content-Length'));
-        self::assertSame('<head><title>woei</title></head>', (string)$compressedResponse->getBody());
+        self::assertTrue(\in_array(
+            (int)$compressedResponse->getHeaderLine('Content-Length'),
+            [
+                25,
+                32,
+            ],
+            true
+        ));
+        self::assertTrue(\in_array(
+            (string)$compressedResponse->getBody(),
+            [
+                '<head><title>woei</title></head>',
+                '<head><title>woei</title>',
+            ],
+            true
+        ));
     }
 
     public function provideheadersForIgnoreResponse()

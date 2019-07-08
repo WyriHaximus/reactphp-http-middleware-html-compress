@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71a1431f73919d3ec722bbe8ad375924",
+    "content-hash": "6ff9db7bb33efbfc8451b9cbed5fc445",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -291,7 +291,7 @@
             "time": "2013-03-25T21:54:33+00:00"
         },
         {
-            "name": "natxet/CssMin",
+            "name": "natxet/cssmin",
             "version": "v3.0.6",
             "source": {
                 "type": "git",
@@ -943,17 +943,70 @@
             "time": "2018-01-15T21:00:49+00:00"
         },
         {
-            "name": "tedivm/jshrink",
-            "version": "v1.3.1",
+            "name": "symfony/css-selector",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tedious/JShrink.git",
-                "reference": "21254058dc3ce6aba6bef458cff4bfa25cf8b198"
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tedious/JShrink/zipball/21254058dc3ce6aba6bef458cff4bfa25cf8b198",
-                "reference": "21254058dc3ce6aba6bef458cff4bfa25cf8b198",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/105c98bb0c5d8635bea056135304bd8edcc42b4d",
+                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-16T21:53:39+00:00"
+        },
+        {
+            "name": "tedivm/jshrink",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "566e0c731ba4e372be2de429ef7d54f4faf4477a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/566e0c731ba4e372be2de429ef7d54f4faf4477a",
+                "reference": "566e0c731ba4e372be2de429ef7d54f4faf4477a",
                 "shasum": ""
             },
             "require": {
@@ -986,7 +1039,115 @@
                 "javascript",
                 "minifier"
             ],
-            "time": "2018-09-16T00:02:51+00:00"
+            "time": "2019-06-28T18:11:46+00:00"
+        },
+        {
+            "name": "voku/html-min",
+            "version": "3.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/HtmlMin.git",
+                "reference": "62a1f2af5e317b2f118bf2d63194e8462db38af2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/HtmlMin/zipball/62a1f2af5e317b2f118bf2d63194e8462db38af2",
+                "reference": "62a1f2af5e317b2f118bf2d63194e8462db38af2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=7.0.0",
+                "voku/simple_html_dom": "~4.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0 || ~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "voku\\": "src/voku/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/"
+                }
+            ],
+            "description": "HTML Compressor and Minifier",
+            "homepage": "https://github.com/voku/HtmlMin",
+            "keywords": [
+                "compress",
+                "compression",
+                "compressor",
+                "html",
+                "minifier"
+            ],
+            "time": "2019-06-19T11:19:09+00:00"
+        },
+        {
+            "name": "voku/simple_html_dom",
+            "version": "4.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/simple_html_dom.git",
+                "reference": "f24249b7bfb04043728b4130a1d8792017cafb61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/f24249b7bfb04043728b4130a1d8792017cafb61",
+                "reference": "f24249b7bfb04043728b4130a1d8792017cafb61",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.0.0",
+                "symfony/css-selector": "~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0 || ~7.0"
+            },
+            "suggest": {
+                "voku/portable-utf8": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "voku\\helper\\": "src/voku/helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "dimabdc",
+                    "email": "support@titor.ru",
+                    "homepage": "http://github.com/dimabdc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple HTML DOM package.",
+            "homepage": "http://simplehtmldom.sourceforge.net/",
+            "keywords": [
+                "HTML Parser",
+                "dom",
+                "php dom"
+            ],
+            "time": "2019-07-01T07:59:39+00:00"
         },
         {
             "name": "websharks/css-minifier",
@@ -1043,35 +1204,120 @@
             "time": "2015-08-21T03:19:25+00:00"
         },
         {
-            "name": "wyrihaximus/html-compress",
-            "version": "1.4.0",
+            "name": "wyrihaximus/compress",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WyriHaximus/HtmlCompress.git",
-                "reference": "0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975"
+                "url": "https://github.com/WyriHaximus/php-compress.git",
+                "reference": "07c1050f7fefdfe091e913f6227bdf53e8b86a3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975",
-                "reference": "0c2207ceaa711b93e1d33551cbb7b1ba6cd1e975",
+                "url": "https://api.github.com/repos/WyriHaximus/php-compress/zipball/07c1050f7fefdfe091e913f6227bdf53e8b86a3d",
+                "reference": "07c1050f7fefdfe091e913f6227bdf53e8b86a3d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "wyrihaximus/test-utilities": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WyriHaximus\\Compress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com",
+                    "homepage": "http://wyrihaximus.net/"
+                }
+            ],
+            "description": "Compress marker interface and utility compressors",
+            "keywords": [
+                "compress"
+            ],
+            "time": "2019-07-07T21:09:04+00:00"
+        },
+        {
+            "name": "wyrihaximus/css-compress",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/php-css-compress.git",
+                "reference": "150af6d8aa68daf11b430afb6a6801bd3e09035d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/php-css-compress/zipball/150af6d8aa68daf11b430afb6a6801bd3e09035d",
+                "reference": "150af6d8aa68daf11b430afb6a6801bd3e09035d",
                 "shasum": ""
             },
             "require": {
                 "jalle19/php-yui-compressor": "^1.0",
-                "linkorb/jsmin-php": "1.0.0",
                 "matthiasmullie/minify": "^1.3",
-                "meenie/javascript-packer": "1.1",
-                "natxet/cssmin": "^3.0",
-                "patchwork/jsqueeze": "~1.0|~2.0",
-                "php": "^7.0 || ^5.6",
-                "tedivm/jshrink": "^1.3",
-                "websharks/css-minifier": "150820"
+                "natxet/cssmin": "^3.0.5",
+                "php": "^7.2",
+                "websharks/css-minifier": "150820",
+                "wyrihaximus/compress": "^1.1"
             },
             "require-dev": {
-                "phake/phake": "^1.0",
-                "phpunit/phpunit": "^4.0",
-                "squizlabs/php_codesniffer": "^1.0",
-                "vectorface/dunit": "^2.0"
+                "wyrihaximus/test-utilities": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WyriHaximus\\CssCompress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com",
+                    "homepage": "http://wyrihaximus.net/"
+                }
+            ],
+            "description": "Compress/minify your CSS",
+            "keywords": [
+                "compress",
+                "html"
+            ],
+            "time": "2019-07-07T22:05:59+00:00"
+        },
+        {
+            "name": "wyrihaximus/html-compress",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/HtmlCompress.git",
+                "reference": "7da57791a10adfb2a4711dd903740ec102b37277"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/7da57791a10adfb2a4711dd903740ec102b37277",
+                "reference": "7da57791a10adfb2a4711dd903740ec102b37277",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2",
+                "voku/html-min": "^3.1.8",
+                "wyrihaximus/compress": "^1.1",
+                "wyrihaximus/css-compress": "^1.0",
+                "wyrihaximus/js-compress": "^1.0"
+            },
+            "require-dev": {
+                "wyrihaximus/test-utilities": "^1.2"
             },
             "type": "library",
             "autoload": {
@@ -1095,7 +1341,58 @@
                 "compress",
                 "html"
             ],
-            "time": "2018-01-03T21:15:44+00:00"
+            "time": "2019-07-07T22:30:52+00:00"
+        },
+        {
+            "name": "wyrihaximus/js-compress",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/php-js-compress.git",
+                "reference": "bddf83dc780c7033b8c98463ebe7e3b2829dbb69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/php-js-compress/zipball/bddf83dc780c7033b8c98463ebe7e3b2829dbb69",
+                "reference": "bddf83dc780c7033b8c98463ebe7e3b2829dbb69",
+                "shasum": ""
+            },
+            "require": {
+                "jalle19/php-yui-compressor": "^1.0",
+                "linkorb/jsmin-php": "1.0.0",
+                "matthiasmullie/minify": "^1.3",
+                "meenie/javascript-packer": "1.1",
+                "patchwork/jsqueeze": "~2.0",
+                "php": "^7.2",
+                "tedivm/jshrink": "^1.3",
+                "wyrihaximus/compress": "^1.1"
+            },
+            "require-dev": {
+                "wyrihaximus/test-utilities": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WyriHaximus\\JsCompress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com",
+                    "homepage": "http://wyrihaximus.net/"
+                }
+            ],
+            "description": "Compress/minify your JavaScript",
+            "keywords": [
+                "compress",
+                "html"
+            ],
+            "time": "2019-07-07T21:23:48+00:00"
         }
     ],
     "packages-dev": [
@@ -2633,7 +2930,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🅱 Nette Bootstrap: the simple way to configure and bootstrap your Nette application.",
+            "description": "? Nette Bootstrap: the simple way to configure and bootstrap your Nette application.",
             "homepage": "https://nette.org",
             "keywords": [
                 "bootstrapping",
@@ -2698,7 +2995,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP 7.1 features.",
+            "description": "? Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP 7.1 features.",
             "homepage": "https://nette.org",
             "keywords": [
                 "compiled",
@@ -2763,7 +3060,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "description": "? Nette Finder: find files and directories with an intuitive API.",
             "homepage": "https://nette.org",
             "keywords": [
                 "filesystem",
@@ -2823,7 +3120,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+            "description": "? Nette NEON: encodes and decodes NEON file format.",
             "homepage": "http://ne-on.org",
             "keywords": [
                 "export",
@@ -2886,7 +3183,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.3 features.",
+            "description": "? Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.3 features.",
             "homepage": "https://nette.org",
             "keywords": [
                 "code",
@@ -2950,7 +3247,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+            "description": "? Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
             "homepage": "https://nette.org",
             "keywords": [
                 "autoload",
@@ -3023,7 +3320,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🛠 Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "description": "? Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
             "homepage": "https://nette.org",
             "keywords": [
                 "array",
@@ -5643,7 +5940,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -6422,7 +6719,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "description": "🌯 PHPStan rules wrapper",
+            "description": "? PHPStan rules wrapper",
             "time": "2019-03-16T14:53:23+00:00"
         },
         {
