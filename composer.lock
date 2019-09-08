@@ -117,18 +117,18 @@
             "authors": [
                 {
                     "name": "Joost Faassen",
-                    "email": "j.faassen@linkorb.com",
-                    "role": "Packaging for Composer"
+                    "role": "Packaging for Composer",
+                    "email": "j.faassen@linkorb.com"
                 },
                 {
                     "name": "Ryan Grove",
-                    "email": "ryan@wonko.com",
-                    "role": "PHP port"
+                    "role": "PHP port",
+                    "email": "ryan@wonko.com"
                 },
                 {
                     "name": "Adam Gofort",
-                    "email": "aag@adamgoforth.com",
-                    "role": "Updates to the PHP port"
+                    "role": "Updates to the PHP port",
+                    "email": "aag@adamgoforth.com"
                 },
                 {
                     "name": "Douglas Crockford",
@@ -238,9 +238,9 @@
             "authors": [
                 {
                     "name": "Matthias Mullie",
+                    "role": "Developer",
                     "email": "pathconverter@mullie.eu",
-                    "homepage": "http://www.mullie.eu",
-                    "role": "Developer"
+                    "homepage": "http://www.mullie.eu"
                 }
             ],
             "description": "Relative path converter",
@@ -944,16 +944,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.3.2",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d"
+                "reference": "c6e5e2a00db768c92c3ae131532af4e1acc7bd03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/105c98bb0c5d8635bea056135304bd8edcc42b4d",
-                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/c6e5e2a00db768c92c3ae131532af4e1acc7bd03",
+                "reference": "c6e5e2a00db768c92c3ae131532af4e1acc7bd03",
                 "shasum": ""
             },
             "require": {
@@ -979,12 +979,12 @@
             ],
             "authors": [
                 {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -993,7 +993,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T21:53:39+00:00"
+            "time": "2019-08-20T14:07:54+00:00"
         },
         {
             "name": "tedivm/jshrink",
@@ -1092,16 +1092,16 @@
         },
         {
             "name": "voku/simple_html_dom",
-            "version": "4.6.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/simple_html_dom.git",
-                "reference": "f24249b7bfb04043728b4130a1d8792017cafb61"
+                "reference": "236b5094cd3989ff4fb7f8ff167ba1617635762e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/f24249b7bfb04043728b4130a1d8792017cafb61",
-                "reference": "f24249b7bfb04043728b4130a1d8792017cafb61",
+                "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/236b5094cd3989ff4fb7f8ff167ba1617635762e",
+                "reference": "236b5094cd3989ff4fb7f8ff167ba1617635762e",
                 "shasum": ""
             },
             "require": {
@@ -1129,14 +1129,14 @@
             ],
             "authors": [
                 {
-                    "name": "Lars Moelleken",
-                    "homepage": "http://www.moelleken.org/",
-                    "role": "Developer"
-                },
-                {
                     "name": "dimabdc",
                     "email": "support@titor.ru",
                     "homepage": "http://github.com/dimabdc",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/",
                     "role": "Developer"
                 }
             ],
@@ -1147,7 +1147,7 @@
                 "dom",
                 "php dom"
             ],
-            "time": "2019-07-01T07:59:39+00:00"
+            "time": "2019-08-30T21:49:01+00:00"
         },
         {
             "name": "websharks/css-minifier",
@@ -1180,18 +1180,18 @@
             "authors": [
                 {
                     "name": "websharks",
-                    "homepage": "http://websharks-inc.com/",
-                    "role": "company"
+                    "role": "company",
+                    "homepage": "http://websharks-inc.com/"
                 },
                 {
                     "name": "jaswsinc",
-                    "homepage": "http://jaswsinc.com/",
-                    "role": "developer"
+                    "role": "developer",
+                    "homepage": "http://jaswsinc.com/"
                 },
                 {
                     "name": "raamdev",
-                    "homepage": "http://raam.org/",
-                    "role": "developer"
+                    "role": "developer",
+                    "homepage": "http://raam.org/"
                 }
             ],
             "description": "Compresses CSS.",
@@ -1297,16 +1297,16 @@
         },
         {
             "name": "wyrihaximus/html-compress",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/HtmlCompress.git",
-                "reference": "7da57791a10adfb2a4711dd903740ec102b37277"
+                "reference": "d1d2f1b830a9d291ea322b0bed9e0e9547a39a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/7da57791a10adfb2a4711dd903740ec102b37277",
-                "reference": "7da57791a10adfb2a4711dd903740ec102b37277",
+                "url": "https://api.github.com/repos/WyriHaximus/HtmlCompress/zipball/d1d2f1b830a9d291ea322b0bed9e0e9547a39a73",
+                "reference": "d1d2f1b830a9d291ea322b0bed9e0e9547a39a73",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "compress",
                 "html"
             ],
-            "time": "2019-07-07T22:30:52+00:00"
+            "time": "2019-09-08T20:30:26+00:00"
         },
         {
             "name": "wyrihaximus/js-compress",
@@ -3757,18 +3757,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -6543,8 +6543,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
